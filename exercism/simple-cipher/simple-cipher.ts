@@ -1,8 +1,10 @@
+const alphabet: string = "abcdefghijklmnopqrstuvwxyz";
+
 class SimpleCipher {
-  alphabet: string = "abcdefghijklmnopqrstuvwxyz";
+  alphabet: string = alphabet;
   key: string;
 
-  constructor(key: any = "abcdefghijklmnopqrstuvwxyz") {
+  constructor(key: any = alphabet) {
     if (!key || key !== key.toLocaleLowerCase() || !isNaN(key))
       throw new Error("Bad key");
     this.key = key;
